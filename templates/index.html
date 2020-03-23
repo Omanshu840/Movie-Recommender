@@ -1,0 +1,94 @@
+{% extends "base.html" %} {% block content %}
+
+
+<h2>Emotion Classifier</h2>
+
+
+<a href="predict"><button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button></a>
+
+
+<div class="col-sm-4  post-project" style="margin-left: 30%;">
+
+    <div id="my_camera"></div>
+   {# <input type=button value="Configure" onClick="configure()">#}
+    <input class="btn active" style="margin-left: 25%;"  type=button value="Take Snapshot" onClick="take_snapshot()">
+</div>
+
+
+<!-- Script -->
+<script type="text/javascript" src="/static/js/webcam.js"></script>
+
+<!-- Code to handle taking the snapshot and displaying it locally -->
+<script language="JavaScript">
+
+// Configure a few settings and attach camera
+Webcam.set({
+width: 320,
+height: 240,
+image_format: 'jpeg',
+jpeg_quality: 90
+});
+Webcam.attach( '#my_camera' );
+
+// A button for taking snaps
+
+
+// preload shutter audio clip
+
+function take_snapshot() {
+// take snapshot and get image data
+Webcam.snap(function(data_uri) {
+// display results in page
+console.log(data_uri);
+
+// $.ajax({
+//  type: 'POST',
+//  url: "http://localhost:5000/collectFace",
+//  data: {image:data_uri},
+//  dataType: "application/json",
+//  success: function(resultData) {
+
+//     console.log(resultData);
+
+//      if(resultData!=""){
+//          alert(resultData);
+//          window.location.href = "";
+//      }
+//      else{
+//          alert("Couldn't find face\n Login again");
+//          window.location.href = "";
+//      }
+//  }
+// });
+// } );
+
+fetch("http://localhost:5000/collectFace",{
+    method:'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body:JSON.stringify({
+        'image':data_uri
+    })
+}).then(function(resp){
+    return resp.json()
+}).then(function(label){
+    window.location.href = "http://localhost:5000/list_movies?label="+label;
+})
+} );
+
+Webcam.reset();
+}
+
+
+
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+
