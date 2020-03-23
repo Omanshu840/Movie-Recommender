@@ -1,0 +1,126 @@
+
+/* .categorie-item1 img{
+    
+    height: 300px;
+    width: 500px;
+} */
+
+
+
+/* .text-block {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: black;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	opacity: 0.7;
+	width: 500px;
+} */
+
+/* .categorie-item1 {
+	margin-bottom: 34px;
+	position: relative;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	opacity: 0.7;
+	position: relative;
+}
+
+.categorie-item1:hover {
+    opacity: 1;
+} */
+
+
+
+
+
+.categorie-item {
+	margin-bottom: 34px;
+	background: #edf4f6;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.categorie-item img{
+	width: 100%;
+	height: 250px;
+}
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.categorie-item .ci-thumb {
+	background-size: cover;
+	height: 148px;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.categorie-item .ci-text {
+	padding: 10px 10px;
+}
+
+.categorie-item .ci-text h5 {
+	margin-bottom: 5px;
+}
+
+.categorie-item .ci-text span {
+	font-size: 18px;
+	font-weight: 600;
+	color: #d82a4e;
+}
+
+.categorie-item:hover {
+	background: #d82a4e;
+}
+
+.categorie-item:hover .ci-text h5,
+.categorie-item:hover .ci-text p,
+.categorie-item:hover .ci-text span {
+	color: #fff;
+}
+
+
+
+
+/* .container {
+	margin-bottom: 34px;
+	position: relative;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	opacity: 0.7;
+
+  }
+
+  .container:hover {
+	  opacity: 1;
+  }
+
+
+.container img{
+	height: 300px;
+    width: 500px;
+}
+  
+
+  .text-block {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: black;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	opacity: 0.7;
+	width: 500px;
+  } */
