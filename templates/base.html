@@ -9,15 +9,22 @@
     <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename ='css/bootstrap.min.css') }}"/>
-    <link href="{{ url_for('static', filename ='css/main.css') }}" rel="stylesheet">      
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/bootstrap.min.css') }}" />
+    <link href="{{ url_for('static', filename ='css/main.css') }}" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark" style="background-color: #1f1d1d;">
         <div class="container">
-            <a class="navbar-brand" href="#">Mood Based Movie Recommender</a>
-            <a href="/"><button class="btn btn-outline-secondary my-2 my-sm-0" type="button">Home</button></a>
+            <a class="navbar-brand" href="#" style="color: #FC0000;">
+                <h1>Mood Based Movie Recommender</h1>
+            </a>
+            <a href="/"><button class="btn my-2 my-sm-0 custom-btn" type="button">Home</button></a>
         </div>
     </nav>
     <div class="container">
@@ -26,7 +33,7 @@
 </body>
 
 <footer>
-       
+
 </footer>
 
 </html>

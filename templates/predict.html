@@ -1,8 +1,10 @@
 {% extends "base.html" %} {% block content %}
 
-<h2>Result : {{ label }}</h2>
 
-<h2>Recommended Movies:</h2>
+
+<h2 style="margin-bottom: 40px;">Result : {{ label }}</h2>
+
+<h2 style="margin-bottom: 30px;">Recommended Movies:</h2>
 
 
 <div class="row">
@@ -12,8 +14,7 @@
             <!-- <div class="ci-thumb set-bg" data-setbg="Drishyam-Poster.jpg"></div> -->
             <img src="{{ R.imglink }}">
             <div class="ci-text">
-                <h5>{{ R.mid }} </h5>
-                <p>{{ R.mname }}</p>
+                <h3>{{ R.mname }}</h3>
             </div>
         </div>
     </div>
@@ -55,12 +56,9 @@
 {% endfor %} -->
 
 
-<a href="/"><button type="button" class="btn btn-primary btn-lg " id="btn-predict">Home</button></a>
+<a href="/"><button type="button" class="btn btn-lg custom-btn" style="margin-bottom: 50px;"
+        id="btn-predict">Home</button></a>
+
 
 
 {% endblock %}
-
-
-
-
-
