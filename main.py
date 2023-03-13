@@ -33,7 +33,7 @@ app.config['DEBUG'] = True
 
 app.config['UPLOAD_FOLDER'] = 'static/images'
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://Om_movie:Password@localhost:3306/movierecommender'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:admin@localhost:3306/example'
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -124,7 +124,7 @@ def collectFace():
 
     return render_template('index.html')
 
-@app.route('/list_movies/')
+@app.route('/list_movies/',methods = ['GET','POST'])
 def list_movies():
     label = request.args.get("label",0)
     q = "select * from "+label+" order by rand() limit 6"
